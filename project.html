@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <!-- csslink -->
+    <link rel="stylesheet" href="stylepr.css">
+
+    <!-- chartlink -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1 style="color:white; border-bottom:black; padding:8px 0; width:100%;">Income Expense Calculator</h1>
+    </header>
+    <br>
+    <div class="container">
+
+        <!-- area1 -->
+        <div class="area1">
+            <div class="area1left a1">
+                <h2>Add Income</h2>
+                <br>
+                <form action="" id="adddetails1" style="background-color:transparent;" >
+                    <input type="number" id="amount" class="amo" placeholder="Input Income Here"><br>
+                    <label for="catogeryinc" style="background-color:transparent; color:black;font-weight:bolder;">Catogery</label>
+                    <input type="text" class="Catogery" id="catogery" placeholder="Catogery eg:(salary)"><br>
+                    <div class="a1lst">
+                        <input type="reset">
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+
+            <div class="area1right a1">
+                <h2>Add Expense</h2>
+                <br>
+                <form action=""  id="adddetails2"  style="background-color:transparent;" >
+                    <input type="number" id="amount2" class="amo" placeholder="Input Expense Here"><br>
+                    <label for="catogeryexp" style="background-color:transparent; color:black;font-weight:bolder;">Catogery : </label>
+                    <input type="text" class="Catogery" id="catogery2" placeholder="Catogery eg:(Fuel)" ><br>
+                    <div class="a1lst">
+                        <input type="reset">
+                        <input onclick="submitted" type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+
+        <!-- area2 -->
+        <div class="area2">
+            <div class="incometable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CATOGERY</th>
+                            <th></th>
+                            <th>INCOME</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Tabledetailes1">
+                        <tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="expensetable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CATOGERY</th>
+                            <th></th>
+                            <th>INCOME</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Tabledetailes2">
+                        <tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="total">
+            <h2>Total Income = <span id="totali">0</span></h2>
+            <h2>Total Expense = <span id="totale">0</span></h2>
+        </div>
+        <br>
+
+        <!-- area3 -->
+        <div class="area3">
+            <div class="a31">
+                <br><br>
+                <h1 id="totalbalance" class="a3h1">Total Balance = <span id="Balance" >0</span></h1>
+            </div>
+            <br><br>
+            <div class="a32">
+                <br>
+                <h1 id="hchart" class="a3h2">Income Expense Chart</h1>
+            </div> 
+        </div>
+        <div class="Chart1"style="width:100%;height:350px;">
+            <canvas id="doughnut-chart" class="chart"></canvas>
+        </div>
+    </div>
+
+    <script src="project.js"></script>
+
+</body>
+</html>
